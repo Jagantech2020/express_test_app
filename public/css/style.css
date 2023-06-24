@@ -1,16 +1,7 @@
 *{
     padding: 0;
-    margin: 0 auto;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
-}
-.d-flex{
-    display: flex;
-}
-
-.justify-content-around{
-    justify-content: space-around;
 }
 
 body {
@@ -18,25 +9,20 @@ body {
     background-color: beige;
 }
 
-.pad-10 {
-    padding: 10px;
-}
 
 ul {
     list-style: none;
     padding: 0px;
 }
 
-ul li {
-    margin-left: 10px;
-    
+.theme-color-1 {
+    background-color: blueviolet;
+    color: #fff;
 }
 
-a{
+ul li a{
     text-decoration: none;
-    color: black;
     padding: 10px 20px;
-    background-color: blueviolet;
 }
 
 header, footer{
@@ -52,5 +38,5 @@ header, footer{
 }
 .container {
     padding: 20px;
-    height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
 }
