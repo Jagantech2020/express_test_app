@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%= pageTitle %></title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-        <%- include("layouts/header.ejs") %>
-        <div class="d-flex container">
-            <h1><%= pageName %></h1>
+
+<head>
+    <title>
+        <%= pageTitle %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <%- include("layouts/header.ejs") %>
+        <div class="container">
+            <h4 class="m-auto text-center">
+                <%= pageName %>
+            </h4>
+            <form action="/login" method="POST"  class="form-control w-50 m-auto mt-4 p-5 pt-3 pb-3">
+                <div class="mb-3">
+                    <label for="username" class="form-label">User name:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter user name" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password"
+                        name="password">
+                </div>
+                <div class="form-check mb-3">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+                <div class="mb-3 mt-3">
+                    <a href="/register">Not a Registered user?</a>
+                </div>
+            </form>
+           
         </div>
         <%- include("layouts/footer.ejs") %>
-    </body>
+</body>
+
 </html>
